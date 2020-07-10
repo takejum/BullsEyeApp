@@ -54,26 +54,25 @@ class ViewController: UIViewController {
         
         let title: String
         if difference == 0 {
-            title = "ほんまにおめでとう！こればっかりは頭が上がりませんわ！"
+            title = "Great Job!!"
             points += 100
         } else if difference == 1 {
-            title = "ゲロ惜しい！次のラウンドで頑張れ！！"
+            title = "You almost had it!!"
             points += 50
         } else if difference <= 5 {
-            title = "惜しいですね〜。Keep it up!"
+            title = "Damn close!! Keep it up!"
         } else if difference <= 10 {
-            title = "悪くはないけど、もうちょいいけたんとちゃうんか？"
+            title = "Not too bad!! Keet it up!"
         } else {
-            title = "オメェはホームレスのぺぇずりでもしとけこの人間のゴミが！！"
-        }
+            title = "You Suck!!"
         
         let message: String
         if difference <= 5 {
-            message = "\(points)ポイント獲得しました！！"
+            message = "You got \(points)points!!"
         } else if difference <= 10 {
-            message = "\(points)ポイント獲得。"
+            message = "You got \(points)points."
         } else {
-            message = "\(points)ポイント獲得…。なめてんの？"
+            message = "You only got \(points)points...."
         }
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
